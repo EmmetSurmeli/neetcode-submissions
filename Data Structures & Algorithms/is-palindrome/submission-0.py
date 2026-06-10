@@ -13,4 +13,3 @@ class Solution:
             else:
                 i += 1
         return True
-        # Was it a car or a cat I saw?
