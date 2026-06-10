@@ -14,6 +14,3 @@ class Solution:
         while len(output) < k:
             output.append(arr.pop()[1])
         return output
-        #dictionary right now: keys are nums, values are occurrences
-        #optimal: keys are occurences, values are list of nums
-        #How do you know where eahc number is? bucket sort
