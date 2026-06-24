@@ -1,10 +1,10 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        currentMax = 0
-        currentLow = prices[0]
-        for n in prices:
-            if n < currentLow:
-                currentLow = n
-            if n - currentLow > currentMax:
-                currentMax = n - currentLow
-        return currentMax
+        currentProf = 0
+        smallest = prices[0]
+        for i in prices:
+            if i < smallest:
+                smallest = i
+            elif (i - smallest) > currentProf:
+                currentProf = i - smallest
+        return currentProf
