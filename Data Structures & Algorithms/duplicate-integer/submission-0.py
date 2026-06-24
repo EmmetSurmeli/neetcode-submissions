@@ -1,9 +1,8 @@
 class Solution:
     def hasDuplicate(self, nums: List[int]) -> bool:
-        stored = set()
-        for x in nums:
-            if x in stored:
+        mySet = {None}
+        for i in nums:
+            if i in mySet:
                 return True
-            else:
-                stored.add(x)
+            mySet.add(i)
         return False
