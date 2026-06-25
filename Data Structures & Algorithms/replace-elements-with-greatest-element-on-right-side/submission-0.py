@@ -1,9 +1,13 @@
 class Solution:
     def replaceElements(self, arr: List[int]) -> List[int]:
-        greatest = arr[-1]
+        highest = arr[-1]
         arr[-1] = -1
-        for i in range(len(arr) - 2, -1, -1):
-            temp = greatest
-            greatest = max(greatest, arr[i])
-            arr[i] = temp
+        for i in range (len(arr) -2, -1, -1):
+            if highest > arr[i]:
+                arr[i] = highest
+            else:
+                temp = arr[i]
+                arr[i] = highest
+                highest = temp
         return arr
+                
