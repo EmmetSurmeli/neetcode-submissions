@@ -3,13 +3,14 @@ class Solution:
         i = 0
         j = len(s) - 1
         while i < j:
-            if not s[i].isalnum():
+            if s[i].isalnum() and s[j].isalnum():
+                if s[i].lower() != s[j].lower():
+                    return False
                 i += 1
-            elif not s[j].isalnum():
                 j -= 1
-            elif s[i].lower() != s[j].lower():
-                return False
+            elif s[i].isalnum():
+                j -= 1
             else:
                 i += 1
-                j -= 1
         return True
+            
